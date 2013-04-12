@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class GildedRose {
+public class GildedRoseOriginalWithRefactoringsForCharacterizationTest {
 
 	private static List<Item> items = null;
 
@@ -13,8 +13,9 @@ public class GildedRose {
 
 
 	public static void setItems(List<Item> items) {
-		GildedRose.items = items;
+		GildedRoseOriginalWithRefactoringsForCharacterizationTest.items = items;
 	}
+
 
 
 	/**
