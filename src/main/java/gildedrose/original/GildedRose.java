@@ -1,10 +1,10 @@
-import gildedrose.original.Item;
+package gildedrose.original;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class GildedRoseOriginalWithRefactoringsForCharacterizationTest {
+public class GildedRose {
 
 	private static List<Item> items = null;
 
@@ -15,9 +15,8 @@ public class GildedRoseOriginalWithRefactoringsForCharacterizationTest {
 
 
 	public static void setItems(List<Item> items) {
-		GildedRoseOriginalWithRefactoringsForCharacterizationTest.items = items;
+		GildedRose.items = items;
 	}
-
 
 
 	/**
@@ -34,7 +33,7 @@ public class GildedRoseOriginalWithRefactoringsForCharacterizationTest {
 
 
 
-	protected static void initItemList() {
+	public static void initItemList() {
 		items = new ArrayList<Item>();
         items.add(new Item("+5 Dexterity Vest", 10, 20));
         items.add(new Item("Aged Brie", 2, 0));

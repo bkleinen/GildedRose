@@ -1,3 +1,5 @@
+import gildedrose.original.GildedRose;
+
 import java.util.HashMap;
 
 public class GildedRoseWithTestAccessor extends GildedRose {

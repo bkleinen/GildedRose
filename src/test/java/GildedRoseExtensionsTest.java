@@ -1,4 +1,6 @@
 import static org.junit.Assert.*;
+import gildedrose.original.GildedRose;
+import gildedrose.original.Item;
 
 import org.junit.After;
 import org.junit.Before;
@@ -18,7 +20,7 @@ public class GildedRoseExtensionsTest {
 	@Test
 	public void testConjured() {
 		Item item = new Item("Conjured", 8, 4);
-		setItemListTo(item);
+		updateQuality(item);
 		
 		GildedRose.updateQuality();
 		assertEquals(2, item.getQuality());
