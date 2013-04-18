@@ -1,8 +1,9 @@
 package gildedrose.parameterized;
 
 import static org.junit.Assert.assertEquals;
-import gildedrose.original.GildedRose;
-import gildedrose.original.Item;
+import gildedrose.goblinignored.completed.GildedRose;
+import gildedrose.goblinignored.completed.Item;
+import gildedrose.goblinignored.completed.ItemFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,6 +14,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+// original version
 
 /**
  * This is a parameterized Version of the Gilded Rose Characterization Test. It
@@ -88,7 +90,7 @@ public class GildedRoseCharacterizationTest {
 
 	@Test 
 	public void test(){
-		Item item = new Item(itemName, sellIn, quality);
+		Item item = ItemFactory.createItem(itemName, sellIn, quality);
 		List<Item> items = new ArrayList<Item>();
 		items.add(item);
 		GildedRose.setItems(items);

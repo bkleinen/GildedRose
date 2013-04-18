@@ -1,9 +1,9 @@
-package gildedrose.goblinignored;
+package gildedrose.goblinignored.completed;
 
 public class Item {
     public String name;
-	public int sellIn; 
-    public int quality; 
+	private int sellIn; 
+	private int quality; 
     
     public Item(String name, int sellIn, int quality) {
 		this.setName(name);
@@ -30,8 +30,20 @@ public class Item {
 	public void setQuality(int quality) {
 		this.quality = quality;
 	}
-	public void updateQuality(){
-	     quality--;
-		 sellIn--;
+
+	public void oneDayPassed(){
+		sellIn--;
+		int newQuality =  determineQuality(quality,sellIn);
+		if ((newQuality <= 50) || (newQuality < quality))
+			quality = newQuality;
+		}
+
+	protected int determineQuality(int oldQuality,int sellIn) {
+		if (oldQuality <= 0) return 0;
+		if (sellIn >= 0)
+			return oldQuality -1;
+		else 
+			return oldQuality - 2;	
 	}
+	
 }

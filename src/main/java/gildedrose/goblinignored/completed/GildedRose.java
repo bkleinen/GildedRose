@@ -1,4 +1,4 @@
-package gildedrose.goblinignored;
+package gildedrose.goblinignored.completed;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +39,7 @@ public class GildedRose {
 
 	public static void updateQuality() {
 		for (Item item : items)
-			item.updateQuality();
+			item.oneDayPassed();
 	}
 
 }
