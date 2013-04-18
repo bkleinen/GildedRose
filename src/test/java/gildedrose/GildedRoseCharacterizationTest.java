@@ -10,7 +10,7 @@ import java.util.List;
 import org.junit.Test;
 
 /**
- * This tests
+ * This tests the as-is specification of the Gilded Rose.
  * 
  * @author kleinen
  * 
