@@ -1,9 +1,9 @@
 package gildedrose.parameterized;
 
 import static org.junit.Assert.assertEquals;
-import gildedrose.goblinignored.completed.GildedRose;
-import gildedrose.goblinignored.completed.Item;
-import gildedrose.goblinignored.completed.ItemFactory;
+import gildedrose.goblin.strategy.GildedRose;
+import gildedrose.goblin.strategy.Item;
+import gildedrose.goblin.strategy.ItemFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -45,7 +45,7 @@ public class GildedRoseCharacterizationTest {
 				
 				{"- The Quality of an item is never more than 50 TBD: This does not work in the original version!","",5,55,4,54},
 				{"- \"Sulfuras\", I being a legendary item, never has to be sold or decreases in Quality","Sulfuras, Hand of Ragnaros",0,80,0,80},
-				{"- \"Sulfuras\", II being a legendary item, never has to be sold or decreases in Quality","Sulfuras, Hand of Ragnaros",-5,80,-6,80},
+				{"- \"Sulfuras\", sellIn stays even if negative","Sulfuras, Hand of Ragnaros",-5,80,-5,80},
 				
 				{"\"Backstage passes\", like aged brie, increases in Quality as it's SellIn approaches;","Backstage passes to a TAFKAL80ETC concert",15,20,14,21},
 				{"\"Backstage passes\", like aged brie, increases in Quality as it's SellIn approaches; also limited to 50","Backstage passes to a TAFKAL80ETC concert",15,50,14,50},
@@ -62,14 +62,15 @@ public class GildedRoseCharacterizationTest {
 				{"\"Backstage passes\", Quality increases by 3 when there are 5 days","Backstage passes to a TAFKAL80ETC concert",5,20,4,23},
 				{"\"Backstage passes\", Quality increases by 3 when there are 5 days or less - limit 50","Backstage passes to a TAFKAL80ETC concert",5,50,4,50},
 
+				{"\"Backstage passes\", Quality increases by 3 when there are 5 days - grenzwert 6 ","Backstage passes to a TAFKAL80ETC concert",6,20,5,22},
+				
+				{"\"Backstage passes\", Quality increases by 3 when there are 5 days - grenzwert 4","Backstage passes to a TAFKAL80ETC concert",4,20,3,23},
+				
 				{"\"Backstage passes\", Quality drops to 0 after the concert","Backstage passes to a TAFKAL80ETC concert",0,20,-1,0}
 				
 				} );
 	}
 
-
-
-	
 
 	String message;
 	String itemName;
